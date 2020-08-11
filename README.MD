@@ -1,5 +1,5 @@
 # xMDPlayer
-==================================================
+
 一个可以在线听网易云音乐、QQ音乐、酷狗音乐的音乐播放器，还可以让你听自己的网易云歌单哦！
 
 A player that can make you listen to music online including Netease music, QQ music, Kugou Music.What's more, you can listen to your own Netease music list!
@@ -45,8 +45,11 @@ xMDPlayer 基于 `Meting` 的在线音乐播放器，有音乐搜索、播放、
 更新(Update)
 --------
 
+v1.1 Beta 200810
+
   * 全面使用 Material Design
   * 可以设置主题 (Able to change the player's theme)
+  * 支持显示歌词翻译
  
 要求(Requirements)
 ------------
@@ -91,6 +94,9 @@ TODO
   * 下载或分享无版权音乐时给出提示
   * 自定义列表
   * 网易云榜单
+  * (bug)下一首会跳过几首
+  * 随机播放等
+  * 网易云热评
 
 联系(Contact Me)
 ------------

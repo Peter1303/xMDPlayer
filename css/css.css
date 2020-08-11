@@ -1,0 +1,117 @@
+
+/*
+ * Author : Peter1303
+ * Date: 2020/8/8
+ * Time: 11:50
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app-title {
+    font-family:Microsoft YaHei;
+}
+
+a {
+    color: #e91e63
+}
+
+.mdui-list-item-content {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.music-list-item p {
+    margin: 5px;
+}
+
+.music-list-item p:nth-child(2) {
+    font-size: 12px;
+    color: #000000;
+    font-weight: 100;
+}
+
+.music-list-wrapper i {
+    font-weight: 100;
+}
+
+.playList-active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: #e91e63!important;
+    width: 4px;
+    height: 70px;
+}
+
+.music-title {
+    font-size: 10px;
+}
+
+.music-lyric-active p {
+    color: #e91e63!important;
+}
+
+.playBtn {
+    color: #e91e63!important;
+    font-size:38px;
+}
+
+/* 歌词显示区域 */
+.lyric {
+    font-family:Microsoft YaHei;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-align: center;
+    color: #4c4c4c;
+    line-height: 28px;
+    padding: 0 0;
+    margin-top: 95px;
+    margin-bottom: 40px;
+}
+
+/* 歌词ul */
+#lyric {
+    width: 100%;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-top: 300px;
+    overflow: hidden;
+}
+
+#lyric>li {
+    height: 50px;
+    word-break: keep-all;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* 正在播放的那一句歌词 */
+#lyric .lplaying {
+    color: #e91e63;
+}
+
+#lyric::-webkit-scrollbar{width:0;height:0}
+/*
+.no-lyric {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -200px;
+    width: 400px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 20px;
+    text-align: center;
+    z-index: 99;
+}
+ */
