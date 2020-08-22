@@ -12,9 +12,11 @@ Optimized by [Peter1303](https://pdev.top)
 ------------
 xMDPlayer 基于 `Meting` 的在线音乐播放器，有音乐搜索、播放、下载、歌词同步显示、个人网易云音乐播放列表同步等功能。
 
+xMDPlayer is an online music player based on `Meting`. It has the functions of music search, play, download, lyrics (synchronization) display, personal netease music play list synchronization, etc.
+
 前端界面使用 `MDUI` 来开发，`Material Design` 风格。
 
-> 本项目仅为学习前端的练手之作，请勿用作商业用途，请勿利用本项目下载盗版歌曲资源，否则后果自负！
+> 本项目仅为学习前端的练手之作，请勿用作商业用途，请勿利用本项目下载盗版歌曲资源，否则后果自负！This project is only for learning the front practical, do not use it for commercial purposes, do not use this project to download pirated song resources, or you will be responsible for the consequences!
 
 本程序结合(This program combines with the secondary development of) <https://github.com/mengkunsoft/MKOnlineMusicPlayer> 二次开发
 
@@ -44,6 +46,11 @@ xMDPlayer 基于 `Meting` 的在线音乐播放器，有音乐搜索、播放、
 
 更新(Update)
 --------
+
+v1.1 Beta 200822
+
+  * 修复 菜单 bug
+  * 修复 复制 bug
 
 v1.1 Beta 200810
 
