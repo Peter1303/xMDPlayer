@@ -4,7 +4,7 @@
  * Time: 8:2
  */
 
-var version = 'v1.1 Release 200810';
+var version = 'v1.1 Beta 200822';
 
 //判断访问终端
 var browser = {
@@ -114,7 +114,7 @@ function getCookie(key, d_val) {
     if (val === undefined || val === null) {
         return d_val;
     } else {
-        return val;
+        return val === 'true';
     }
 }
 

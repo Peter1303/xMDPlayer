@@ -32,8 +32,11 @@
         <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true ,overlay:true}"><i class="mdui-icon material-icons">menu</i></span>
         <span class="mdui-typo-headline app-title">音乐神器</span>
         <div class="mdui-toolbar-spacer"></div>
-        <button mdui-menu="{target: '#menu'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></button>
+        <button mdui-menu="{target: '#menu'}" class="mdui-btn mdui-btn-icon" onclick="setMenu()"><i class="mdui-icon material-icons">more_vert</i></button>
         <ul class="mdui-menu" id="menu">
+            <li class="mdui-menu-item" id="menu-empty">
+                <a class="mdui-ripple">当前没有操作</a>
+            </li>
             <div id="menu-show">
                 <li class="mdui-menu-item">
                     <a class="mdui-ripple" onclick="show(true)" id="music-lyric">显示歌词</a>
@@ -50,7 +53,7 @@
             <div id="menu-download">
                 <li class="mdui-divider"></li>
                 <li class="mdui-menu-item">
-                    <a class="mdui-ripple" id="music_download" target="_blank">下载歌曲</a>
+                    <a class="mdui-ripple" id="music_download" target="_blank" onclick="initClipboard()">下载歌曲</a>
                     <a class="mdui-ripple" id="music_download-pic" target="_blank">下载封面</a>
                 </li>
             </div>
@@ -479,8 +482,8 @@
 </script>
 <script src="js/functions.js"></script>
 <script src="js/netease.js"></script>
-<script src="js/js.js"></script>
 <script src="js/player.js"></script>
+<script src="js/js.js"></script>
 <script src="js/lyric.js"></script>
 <script src="js/theme.js"></script>
 <script>

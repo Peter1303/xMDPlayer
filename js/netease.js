@@ -37,11 +37,6 @@ function neteaseInit(val) {
        $('#netease-list').hide();
        $('#music-input').show();
        $('#menu-netease').hide();
-       if (!isPlaying) {
-           $('#menu').hide();
-       } else {
-           $('#menu').show();
-       }
    }
 }
 
@@ -212,7 +207,7 @@ function addSheet(num, name, cover) {
     if (cover === '') {
         cover = emptyPic;
     }
-    netease_list.append('<a href="javascript:void(0)" onclick="getNeteaseList(' + num + ')"><div class="mdui-col"><div class="mdui-grid-tile"><img src="' + cover + '"/><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-text"><div class="mdui-grid-tile-title">' + name + '</div></div></div></div></div></a>');
+    netease_list.append('<a href="javascript:void(0)" onclick="getNeteaseList(' + num + ')"><div class="mdui-col"><div class="mdui-grid-tile"><img src="' + cover + '"/><div class="mdui-grid-tile-actions"><div class="mdui-grid-tile-test"><div class="mdui-grid-tile-title">' + name + '</div></div></div></div></div></a>');
 }
 
 /**

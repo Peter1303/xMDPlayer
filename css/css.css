@@ -111,7 +111,7 @@ a {
     height: 200px;
     line-height: 200px;
     font-size: 20px;
-    text-align: center;
+    test-align: center;
     z-index: 99;
 }
  */

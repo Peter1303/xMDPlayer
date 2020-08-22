@@ -109,7 +109,7 @@ function get() {
                         var n = obj.name;
                         var a = getArtist(obj.artist);
                         $('#music_list').append(
-                            ('<li class="mdui-list-item mdui-ripple' + ((i === pos) ? ' playList-active' : '') + '" onclick="play(' + i + ', this)"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line">' + n + '</div><div class="mdui-list-item-text mdui-list-item-two-line">' + a + '</div></div></li>')
+                            ('<li class="mdui-list-item mdui-ripple' + ((i === pos) ? ' playList-active' : '') + '" onclick="play(' + i + ', this)"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line">' + n + '</div><div class="mdui-list-item-test mdui-list-item-two-line">' + a + '</div></div></li>')
                         );
                     }
                 }
@@ -202,6 +202,15 @@ function show(from) {
         $('#musicPlayer-lyric').hide();
         $('#music-lyric').text('显示列表');
         showed = true;
+    }
+}
+
+/**
+ * 处理菜单
+ */
+function setMenu () {
+    if (isPlaying) {
+        $('#menu-empty').hide();
     }
 }
 
@@ -317,7 +326,7 @@ function showAbout() {
 function initCheckBox() {
     var e1 = $('#settings-list').find('input').eq(0);
     var b_e1 = getCookie('copy', true);
-    setChecked(e1, b_e1 === 'true');
+    setChecked(e1, b_e1);
 }
 
 /**
@@ -355,7 +364,7 @@ function addToList (result, activated) {
             }
         }
         $('#music_list').append(
-            ('<li class="mdui-list-item mdui-ripple' + (ac ? ' playList-active' : '') +'" onclick="play(' + i + ', this)"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line">' + n + '</div><div class="mdui-list-item-text mdui-list-item-two-line">' + a + '</div></div></li>')
+            ('<li class="mdui-list-item mdui-ripple' + (ac ? ' playList-active' : '') +'" onclick="play(' + i + ', this)"><div class="mdui-list-item-content"><div class="mdui-list-item-title mdui-list-item-one-line">' + n + '</div><div class="mdui-list-item-test mdui-list-item-two-line">' + a + '</div></div></li>')
         );
     }
 }
@@ -364,10 +373,13 @@ function addToList (result, activated) {
  * 初始化复制
  */
 function initClipboard () {
-    //console.log(copy);
+    var copy = getCookie('copy', true)
+    console.log('copy: ' + copy)
+    var text = copy ? (artist + ' - ' + song_name) : ''
+    console.log(text)
     var clipboard = new ClipboardJS('#music_download', {
         text: function() {
-            return (getCookie('copy', true) === true) ? (artist + ' - ' + song_name) : '';
+            return text;
         }
     });
     clipboard.on('success', function(e) {
